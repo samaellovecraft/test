@@ -1,0 +1,279 @@
+@font-face {
+    font-family: 'Dune';
+    src: url("/static/limbo/fonts/AboriginalSerifITALIC.ttf");
+  }
+
+:root {
+  color-scheme: dark;
+}
+
+::selection {
+  background: #ff073a;
+  color: black;
+}
+
+::-moz-selection {
+  background: #ff073a;
+  color: black;
+}
+
+::-webkit-selection {
+  background: rgb(255, 7, 58);
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgb(255, 7, 58); 
+
+}
+
+
+.disabled {
+  color: rgba(255,255,255,.3) !important;
+  pointer-events: none;
+}
+
+.navbar__link:hover {
+  color: #ff073a;
+  transition: all 0.3s ease 0s;
+}
+
+html {
+  background: black;
+  scroll-behavior: smooth !important;
+  overflow: hidden;
+  scroll-padding-top: 75px;
+}
+
+
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 21;
+  height: 74px;
+  background-color: black;
+}
+
+
+
+.container {
+  margin: 0px auto;
+  padding: 0px 21px;
+}
+
+.navbar__body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  align-items: center;
+}
+
+.navbar__brand {
+  position: relative;
+  z-index: 22;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 36px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar__burger {
+  display: none;
+}
+
+.navbar__list {
+  display: flex;
+  position: relative;
+  z-index: 22;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.navbar__list li {
+  list-style: none;
+  margin: 0 0 0 16px;
+}
+
+.navbar__link {
+  color: white;
+  font-family: 'Cormorant Infant', serif;
+  font-size: 150%;
+  text-decoration: none;
+}
+
+@media (max-width:819px) {
+  .navbar__body {
+    justify-content: center;
+  }
+  .navbar__brand {
+    position: absolute;
+  }
+  .navbar__burger.classic {
+    margin-left: auto;
+  }
+
+  .navbar.active {
+    z-index: 71;
+  }
+  .body.lock {
+    overflow: hidden;
+  }
+  .navbar__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 22;
+  }
+
+  .navbar__burger span {
+    position: absolute;
+    background-color: white;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  .navbar__burger:before, .navbar__burger:after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .navbar__burger:before {
+    top: 0;
+  }
+  .navbar__burger:after {
+    bottom: 0;
+  }
+
+  .navbar__burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  .navbar__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  .navbar__burger.active span {
+    transform: scale(0);
+    transition: all 0.3s ease 0s;
+  }
+
+  .navbar__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+  .navbar__menu.active {
+    background-color: black;
+    top: 0;
+  }
+  .navbar__list li.left {
+    transform: translateX(-100%);
+    transition: all 0.3s ease 0s;
+  }
+  .navbar__list li.right {
+    transform: translateX(100%);
+    transition: all 0.3s ease 0s;
+  }
+  .navbar__list li.left.active {
+    transform: translateX(0);
+    transition: all 0.3s ease 0s;
+  }
+  .navbar__list li.right.active {
+    transform: translateX(0);
+    transition: all 0.3s ease 0s;
+  }
+
+  .navbar__list {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+  }
+  .navbar__list li {
+    margin: 0 0 16px 0;
+    justify-content: space-evenly;
+    display: flex;
+  }
+  .navbar__link {
+    font-size: 30px;
+  }
+  .navbar__brand {
+    font-size: 42px;
+  }
+
+  .dropdown-menu {
+    display: flex;
+    justify-content: space-around;
+    padding-inline-start: 0;
+    width: 100%;
+    position: absolute;
+  }
+
+  .museum {
+    color: white;
+    transition: all 1s ease 0s;
+  }
+  .museum.active {
+    color: #ff073a;
+    transition: all 1s ease 0s;
+  }
+  .museum-item.active {
+    opacity: 1;
+    transition: all 1s ease 0s;
+    pointer-events: auto;
+  }
+  .museum-item {
+    opacity: 0;
+    transition: all 1s ease 0s;
+    pointer-events: none;
+  }
+
+}
+
+@media (min-width: 820px) {
+  .dropdown {
+    display: flex;
+  }
+  .museum {
+    display: none;
+  }
+  body > header > div > div > nav > ul > li.left.dropdown > a:nth-child(3) {
+    margin: 0 0 0 16px;
+  }
+}
