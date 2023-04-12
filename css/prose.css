@@ -1,0 +1,253 @@
+.wrapper {
+  position: relative;
+}
+.navbar {
+  border-bottom: 1px solid #151515;
+}
+.navbar__brand {
+  color: #ff073a;
+}
+.menu {
+  position: fixed;
+  left: 0;
+  top: 74px;
+  bottom: 0;
+  z-index: 22;
+  width: 21%;
+  height: calc(100vh - 74px);
+  background-color: black;
+  display: flex;
+  align-items: center; /* arrow */
+  transition: 1s;
+  transform: translateX(-100%);
+  border-top: 1px solid #151515;
+  border-right: 1px solid #151515;
+}
+
+.menu-active {
+  transform: translateX(0%);
+}
+
+.artworks-list-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: calc(100vh - 125px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+.artworks-list {
+  height: 100%;
+  bottom: 0px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+
+.artworks-list a {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Cormorant Infant', serif;
+  font-size: 121%;
+}
+
+.artworks-list a.hide {
+  display: none;
+}
+
+.artworks-list a:hover {
+  color: #ff073a;
+}
+
+.branch-arrow {
+  width: 78px;
+  height: 26px;
+
+  background-image: url(/img/black-branch-arrow-1024-white-traceENORMOUS.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: -18px;
+  transition: transform 1s ease;
+  z-index: 121;
+}
+
+.branch-arrow-reverse {
+  z-index: 121;
+  transform: rotate(-180deg); /* changed from -180 because of `transform: rotate(-45deg);` */
+}
+
+.artwork {
+  position: absolute;
+  transition: 1s;
+  color: white;
+  font-family: 'Cormorant Infant', serif;
+  font-size: 150%;
+  left: 25%;
+  top: 75px;
+  bottom: 0;
+  right: 25%;
+  padding: 0 0 0 0;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+  z-index: 21;
+}
+
+.artworks-area {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.paragraph-separator {
+  display: block;
+  margin: auto;
+}
+
+.artwork h1 {
+  text-align: center;
+}
+
+.artwork h1:before {
+  display: block;
+  content: "";
+  height: 50px;
+  margin: -50px 0 0;
+}
+
+.artwork p {
+  padding: 21px 0 0 0;
+  text-align: justify;
+  white-space: pre-line;
+}
+
+.author {
+  font-weight: 300;
+  font-style: italic;
+  padding: 42px 0px 42px 0px !important;
+  text-align: right !important;
+}
+
+.dark {
+  -webkit-filter: brightness(11%);
+  filter: brightness(11%);
+}
+
+.artwork p+h1 {
+  margin-top: 69px;
+}
+
+
+.search {
+  margin: auto;
+  display: table;
+}
+
+.search input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 28px;
+  min-width: 0;
+  padding: 0;
+  z-index: 1;
+  position: relative;
+  line-height: 18px;
+  margin: 5px 0;
+  font-size: 121%;
+  -webkit-appearance: none;
+  font-family: 'Cormorant Infant', serif;
+  transition: all 0.6s ease;
+  cursor: pointer;
+  color: white;
+}
+
+.search input+div {
+  position: relative;
+  height: 28px;
+  width: 100%;
+  margin: -28px 0 0 0;
+}
+
+.search input+div svg {
+  display: block;
+  position: absolute;
+  height: 28px;
+  width: 160px;
+  right: 0;
+  top: 0;
+  fill: none;
+  stroke: #ff073a;
+  stroke-width: 1.5px;
+  stroke-dashoffset: 271.908;
+  stroke-dasharray: 59 212.908;
+  transition: all 0.6s ease;
+}
+
+.search input:not(:placeholder-shown), .search input:focus {
+  width: 160px;
+  padding: 0 4px;
+  cursor: text;
+}
+
+.search input:not(:placeholder-shown)+div svg, .search input:focus+div svg {
+  stroke-dasharray: 150 212.908;
+  stroke-dashoffset: 300;
+}
+
+.search-wrapper {
+  display: flex;
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  top: 0;
+}
+
+@media (max-width:1200px) {
+  .artwork {
+    font-size: 24px;
+    left: 21%;
+    right: 21%;
+  }
+  .menu {
+    width: 35%;
+  }
+}
+
+@media (max-width:992px) {
+  .artwork {
+    font-size: 21px;
+    left: 15%;
+    right: 15%;
+  }
+  .menu {
+    width: 35%;
+  }
+}
+
+@media (max-width:767px) {
+  .artwork {
+    font-size: 16px;
+    left: 10%;
+    right: 10%;
+  }
+  .menu {
+    width: 90%;
+  }
+  .artworks-area.lock {
+    overflow: hidden;
+  }
+}

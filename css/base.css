@@ -1,38 +1,36 @@
-@font-face {
-    font-family: 'Dune';
-    src: url("/static/limbo/fonts/AboriginalSerifITALIC.ttf");
-  }
+body {
+  --red-neon: #ff073a;
+  --red-neon-rgb: rgb(255, 7, 58);
+}
 
 :root {
   color-scheme: dark;
 }
 
+/* text selection */
 ::selection {
-  background: #ff073a;
+  background: var(--red-neon);
   color: black;
 }
-
 ::-moz-selection {
-  background: #ff073a;
+  background: var(--red-neon);
   color: black;
 }
-
 ::-webkit-selection {
-  background: rgb(255, 7, 58);
+  background: var(--red-neon-rgb);
   color: black;
 }
 
+/* scrollbar size */
 ::-webkit-scrollbar {
   width: 4px;
 }
-
-/* Track */
+/* scrollbar track */
 ::-webkit-scrollbar-track {
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
-
-/* Handle */
+/* scrollbar handle */
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;

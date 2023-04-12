@@ -1,1 +1,1 @@
-# test
+# Virtual Eden (adaptation for GitHub Pages)
