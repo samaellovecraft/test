@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>ᕭᑐᕮᑎ</title>
   <link rel="icon" href="./img/red_icon.png" type="image/png">
   <link href="./css/base.css" rel="stylesheet">
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/base.js"></script>
-  <script src="./js/burger.js"></script>
+  <script src="./js/vanillaBurger.js"></script>
   <script src="./js/includeHTML.js"></script>
   <link href="./css/prose.css" rel="stylesheet">
-  <script src="./js/museum.js"></script>
+  <script src="./js/vanillaMuseum.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- EDEN -->
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- navbar__brand -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
-  <!-- v -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-  <!-- font-family: 'Marck Script', cursive; -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-  <!-- font-family: 'Cormorant Infant', serif;  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+  <!-- body (font-family: 'Cormorant Infant', serif;)  -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Playfair+Display:ital@1&display=swap"
+    rel="stylesheet">
+
+
+<!-- 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+  <link rel="stylesheet" href="dev/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css"/>
+  <script src="/dev/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script> -->
+
 </head>
 
 <body>
@@ -79,80 +82,84 @@
         <div class="search">
           <input type="text" placeholder=" " id="search" autocomplete="off">
           <div>
-              <svg>
-                  <use xlink:href="#path">
-              </svg>
+            <svg>
+              <use xlink:href="#path">
+            </svg>
           </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" id="path">
-                <path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
-            </symbol>
+          <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" id="path">
+            <path
+              d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562"
+              transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
+          </symbol>
         </svg>
       </div>
       <a href="#" class="branch-arrow"></a>
       <!-- List of artwork headers for search -->
       <nav class="artworks-list-wrapper">
         <div class="artworks-list">
-            <!-- insert here -->
+          <!-- insert here -->
 
-            <a href="#8">Коронованное Чудовище</a>
-            <a href="#7">Гнездо Сахары</a>
-            <a href="#6">Регул</a>
-            <a href="#5">Кибер Венера</a>
-            <a href="#4">Шторм</a>
-            <a href="#3">В одиночестве</a>
-            <a href="#2">Безымянная Девочка</a>
-            <a href="#1">Беладонна</a>
+          <a href="#8">Коронованное Чудовище</a>
+          <a href="#7">Гнездо Сахары</a>
+          <a href="#6">Регул</a>
+          <a href="#5">Кибер Венера</a>
+          <a href="#4">Шторм</a>
+          <a href="#3">В одиночестве</a>
+          <a href="#2">Безымянная Девочка</a>
+          <a href="#1">Беладонна</a>
         </div>
       </nav>
     </div>
   </div>
-  
+
   <!-- List of actual artworks -->
   <div class="artworks-area">
     <div class="artwork">
-        <!-- insert here -->
+      <!-- insert here -->
 
-        <h1 id="8">Коронованное Чудовище</h1>
-        <p w3-include-html="artworks/8.html"></p>
-        <p class="author">Луиза Дана Канимедова</p>
-        
-        <h1 id="7">Гнездо Сахары</h1>
-        <p w3-include-html="artworks/7.html"></p>
-        <p class="author">Луиза Дана Канимедова</p>
-        
-        <h1 id="6">Регул</h1>
-        <p w3-include-html="artworks/6.html"></p>
-        <p class="author">Луиза Дана Канимедова</p>
-        
-        <h1 id="5">Кибер Венера</h1>
-        <p w3-include-html="artworks/5.html"></p>
-        <p class="author">Луиза Дана Канимедова</p>
-        
-        <h1 id="4">Шторм</h1>
-        <p w3-include-html="artworks/4.html"></p>
-        <p class="author">Луиза Дана Канимедова</p>
-        
-        <h1 id="3">В одиночестве</h1>
-        <p w3-include-html="artworks/3.html"></p>
-        <p class="author">Луиза Дана Канимедова</p>
-        
-        <h1 id="2">Безымянная Девочка</h1>
-        <p w3-include-html="artworks/2.html"></p>
-        <p class="author">Луиза Дана Канимедова</p>
-        
-        <h1 id="1">Беладонна</h1>
-        <p w3-include-html="artworks/1.html"></p>
-        <p class="author">Луиза Дана Канимедова</p>
+      <h1 id="8">Коронованное Чудовище</h1>
+      <p w3-include-html="artworks/8.html"></p>
+      <p class="author">Луиза Дана Канимедова</p>
+
+      <h1 id="7">Гнездо Сахары</h1>
+      <p w3-include-html="artworks/7.html"></p>
+      <p class="author">Луиза Дана Канимедова</p>
+
+      <h1 id="6">Регул</h1>
+      <p w3-include-html="artworks/6.html"></p>
+      <p class="author">Луиза Дана Канимедова</p>
+
+      <h1 id="5">Кибер Венера</h1>
+      <p w3-include-html="artworks/5.html"></p>
+      <p class="author">Луиза Дана Канимедова</p>
+
+      <h1 id="4">Шторм</h1>
+      <p w3-include-html="artworks/4.html"></p>
+      <p class="author">Луиза Дана Канимедова</p>
+
+      <h1 id="3">В одиночестве</h1>
+      <p w3-include-html="artworks/3.html"></p>
+      <p class="author">Луиза Дана Канимедова</p>
+
+      <h1 id="2">Безымянная Девочка</h1>
+      <p w3-include-html="artworks/2.html"></p>
+      <p class="author">Луиза Дана Канимедова</p>
+
+      <h1 id="1">Беладонна</h1>
+      <p w3-include-html="artworks/1.html"></p>
+      <p class="author">Луиза Дана Канимедова</p>
     </div>
   </div>
-    
+
   </div>
 
   <script>
     includeHTML();
+    
   </script>
+
 </body>
 
 </html>

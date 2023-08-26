@@ -1,7 +1,7 @@
-window.onload = function() {
+window.onload = function () {
 
   /* arrow animation */
-  $('.branch-arrow').on('click', function(e) {
+  $('.branch-arrow').on('click', function (e) {
     e.preventDefault();
     $('.menu').toggleClass('menu-active');
     $('.branch-arrow').toggleClass('branch-arrow-reverse');
@@ -10,33 +10,30 @@ window.onload = function() {
     }
   });
 
-  /* search */
-  document.querySelector('#search').oninput = function(){
-    let userInput = this.value.trim();
+  document.querySelector('#search').oninput = function () {
+    let userInput = this.value.trim().toLowerCase();
     let searchItems = document.querySelectorAll('.artworks-list a');
-    if (userInput != ''){
-      searchItems.forEach(function(elem){
-        if(elem.innerText.search(userInput) == -1) {
+
+    searchItems.forEach(function (elem) {
+      let index = elem.innerText.toLowerCase().search(userInput);
+      if (userInput !== '') {
+        if (index === -1) {
           elem.classList.add('hide');
           elem.innerHTML = elem.innerText;
-        }
-        else {
+        } else {
           elem.classList.remove('hide');
           let str = elem.innerText;
-          elem.innerHTML = insertMark(str, elem.innerText.search(userInput), userInput.length);
+          elem.innerHTML = insertMark(str, index, userInput.length);
         }
-      });
-    }
-    else {
-      searchItems.forEach(function(elem){
+      } else {
         elem.classList.remove('hide');
         elem.innerHTML = elem.innerText;
-      });
-    }
+      }
+    });
   }
 
-  function insertMark(string, pos, len){
-    return string.slice(0, pos)+'<mark style="background-color: #ff073a;">'+string.slice(pos, pos+len)+'</mark>'+string.slice(pos+len);
+  function insertMark(string, pos, len) {
+    return string.slice(0, pos) + '<mark style="background-color: #ff073a;">' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
   }
 
 };

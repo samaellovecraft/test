@@ -64,14 +64,14 @@
 }
 
 .branch-arrow {
-  width: 78px;
-  height: 26px;
+  width: calc(1263px * 0.07); /* 78px */
+  height: calc(452px * 0.07); /* 26px */
 
   background-image: url(../img/black-branch-arrow-1024-white-traceENORMOUS.png);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  right: -18px;
+  right: -25px;
   transition: transform 1s ease;
   z-index: 121;
 }
